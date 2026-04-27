@@ -1,9 +1,10 @@
 version: "3"
 services:
   mysql8:
-    build: mysql
+    image: mysql:8.4
     container_name: mysql_app
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: golang_user
-    volumes:
-      - ./mysql8:/var/lib/mysql:delegated
+    # volumes:
+    #   - ./mysql:/var/lib/mysql:delegated
