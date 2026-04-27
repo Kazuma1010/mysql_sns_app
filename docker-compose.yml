@@ -1,0 +1,9 @@
+version: "3"
+services:
+  mysql8:
+    build: mysql
+    container_name: mysql_app
+    environment:
+      MYSQL_ROOT_PASSWORD: golang_user
+    volumes:
+      - ./mysql8:/var/lib/mysql:delegated
